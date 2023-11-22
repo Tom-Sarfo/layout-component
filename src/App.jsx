@@ -1,19 +1,13 @@
-// import Index from "./Re-usable-components";
 import "./App.css";
-// import IndexHOC from "./HOC/Index-HOC";
-import Main from "./React-Hook-Design-Pattern/Main"
+import Cookies from "./ReactCookies/Cookies";
 
 function App() {
-	return (
-		<>
-			{/* Entry for reusable component example */}
-			{/* <Index /> */}
-			{/* <IndexHOC /> */}
-			{/* <Main /> */}
-			{/* <p>Nothing to display atm</p> */}
-			<Main />
-		</>
-	);
+  return (
+    <>
+      <Cookies />
+	  Thomas
+    </>
+  );
 }
 
 export default App;
