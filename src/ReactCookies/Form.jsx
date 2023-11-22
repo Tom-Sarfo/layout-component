@@ -22,17 +22,21 @@ export default function Form() {
     Cookies.set("name", "Gyinaso", { expires: 7 });
   }
 
+  function setCookies() {
+    Cookies.set("name", "Tonto", { expires: 7 });
+  }
+
   //   const myCookies = Cookies.get("productProps");
   //   console.log(myCookies);
   const myCookies = Cookies.get("name");
 
-//   function getCookies() {
-    const cookieProduct = products.filter(
-      (product) => product.productName === myCookies
-    );
+  //   function getCookies() {
+  const cookieProduct = products.filter(
+    (product) => product.productName === myCookies
+  );
 
-//     console.log(cookieProduct[0].productPrice);
-//   }
+  //     console.log(cookieProduct[0].productPrice);
+  //   }
 
   return (
     <div>
@@ -44,7 +48,6 @@ export default function Form() {
       <div>
         <p>Product Name: {cookieProduct[0].productName}</p>
         <p>Product price: {cookieProduct[0].productPrice}</p>
-
       </div>
     </div>
   );
