@@ -1,55 +1,36 @@
-import "./App.css"
-// import React, { useState } from 'react';
-// import { useCookies } from 'react-cookie';
-import ExampleCookie from "./TestCookie/ExampleCookie";
+import { useEffect, useState } from "react";
+import "react-image-gallery/styles/css/image-gallery.css";
+// import ImageGallery from "react-image-gallery";
+import AwesomeSlider from "react-awesome-slider";
+import AwesomeSliderStyles from "react-awesome-slider/src/styles";
+import "./App.css";
+import Index from "./Redux";
+import Drawer from "./Drawer/Drawer";
+import Carousel from "./CarouselModule/Carousel";
+import { slides } from "./CarouselModule/ImageSlides";
 
-// const App = () => {
-//    const [name, setName] = useState('');
-//    const [pwd, setPwd] = useState('');
-//    const [cookies, setCookie] = useCookies(['user']);
+function App() {
+  const slider = (
+    <AwesomeSlider cssModule={AwesomeSliderStyles}>
+      <div data-src="/path/to/image-0.png" />
+      <div data-src="/path/to/image-1.png" />
+      <div data-src="/path/to/image-2.jpg" />
+    </AwesomeSlider>
+  );
 
-//    const handle = () => {
-//       setCookie('Name', name, { path: '/' });
-//       setCookie('Password', pwd, { path: '/' });
-//    };
-//    return (
-//       <div className="App">
-//       <h1>Name of the user:</h1>
-//       <input
-//          placeholder="Name"
-//          value={name}
-//          onChange={(e) => setName(e.target.value)}
-//       />
-//       <h1>Password of the user:</h1>
-//       <input
-//          type="password"
-//          placeholder="Password"
-//          value={pwd}
-//          onChange={(e) => setPwd(e.target.value)}
-//       />
-//       <div>
-//       <button onClick={handle}>Set Cookie</button>{' '}
-//       </div>
-//       <br />
-//       {cookies.Name && (
-//       <div>
-//          Name: <p>{cookies.Name}</p>
-//       </div>
-//       )}
-//       {cookies.Password && (
-//       <div>
-//          Password: <p>{cookies.Password}</p>
-//       </div>
-//       )}
-//       </div>
-//    );
-// };
+  // function handleMoveToTop() {
+  //   window.scrollTo(0, 0);
+  // }
 
-function App(){
-  return(
-    <div>
-      <ExampleCookie />
+  return (
+    <div className="h-96 flex justify-center items-center">
+      {/* <Carousel slides={slides} /> */}
+      <div className="w-2/4">
+        {/* <ImageGallery items={images} />; */}
+        {/* {slider} */}
+      </div>
     </div>
-  )
+  );
 }
+
 export default App;

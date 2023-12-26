@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { CookiesProvider } from "react-cookie";
+import { Provider } from "react-redux";
 import App from "./App.jsx";
+
 import "./index.css";
+import { store } from './Redux/store.jsx'
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <CookiesProvider defaultSetOptions={{ path: '/' }}>
+    <Provider store={store}>
       <App />
-    </CookiesProvider>
+    </Provider>
   </React.StrictMode>
 );
